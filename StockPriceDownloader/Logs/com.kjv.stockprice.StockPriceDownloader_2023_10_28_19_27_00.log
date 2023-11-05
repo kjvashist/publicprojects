@@ -1,0 +1,23 @@
+10-28_19:27:00 Initialization StockPriceDownloader
+10-28_19:28:36 Starting download for Ticker [AAPL] after 12 seconds 1#52
+10-28_19:28:40 File [C:\Data\Dev\Java\StockPriceDownloader\Data\AAPL.csv] downloaded successfully! Time taken =4.10 seconds.
+10-28_19:28:52 Starting download for Ticker [MSFT] after 12 seconds 2#52
+10-28_19:28:52 File [C:\Data\Dev\Java\StockPriceDownloader\Data\MSFT.csv] downloaded successfully! Time taken =0.25 seconds.
+10-28_19:29:11 Starting download for Ticker [GOOGL] after 19 seconds 3#52
+10-28_19:29:11 File [C:\Data\Dev\Java\StockPriceDownloader\Data\GOOGL.csv] downloaded successfully! Time taken =0.23 seconds.
+10-28_19:29:29 Starting download for Ticker [AMZN] after 18 seconds 4#52
+10-28_19:29:30 File [C:\Data\Dev\Java\StockPriceDownloader\Data\AMZN.csv] downloaded successfully! Time taken =0.17 seconds.
+10-28_19:29:40 Starting download for Ticker [TSLA] after 10 seconds 5#52
+10-28_19:29:40 File [C:\Data\Dev\Java\StockPriceDownloader\Data\TSLA.csv] downloaded successfully! Time taken =0.23 seconds.
+10-28_19:30:02 Starting download for Ticker [NVDA] after 22 seconds 6#52
+10-28_19:30:02 File [C:\Data\Dev\Java\StockPriceDownloader\Data\NVDA.csv] downloaded successfully! Time taken =0.27 seconds.
+10-28_19:30:19 Starting download for Ticker [META] after 17 seconds 7#52
+10-28_19:30:19 File [C:\Data\Dev\Java\StockPriceDownloader\Data\META.csv] downloaded successfully! Time taken =0.26 seconds.
+10-28_19:30:41 Starting download for Ticker [BRK-A] after 22 seconds 8#52
+10-28_19:30:42 File [C:\Data\Dev\Java\StockPriceDownloader\Data\BRK-A.csv] downloaded successfully! Time taken =0.34 seconds.
+10-28_19:30:59 Starting download for Ticker [TSM] after 17 seconds 9#52
+10-28_19:30:59 File [C:\Data\Dev\Java\StockPriceDownloader\Data\TSM.csv] downloaded successfully! Time taken =0.33 seconds.
+10-28_19:31:14 Starting download for Ticker [JNJ] after 15 seconds 10#52
+10-28_19:31:14 File [C:\Data\Dev\Java\StockPriceDownloader\Data\JNJ.csv] downloaded successfully! Time taken =0.40 seconds.
+10-28_19:31:30 Starting download for Ticker [UNH] after 16 seconds 11#52
+10-28_19:31:31 File [C:\Data\Dev\Java\StockPriceDownloader\Data\UNH.csv] downloaded successfully! Time taken =0.31 seconds.

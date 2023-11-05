@@ -1,0 +1,17 @@
+11-03_19:02:46 Initialization StockPriceDownloader
+11-03_19:03:14 Starting download for Ticker [AAPL] after 23 seconds 1#2
+11-03_19:03:15 File [C:\Data\Dev\Java\StockPriceDownloader\Data\AAPL.csv] downloaded successfully! Time taken =0.66 seconds.
+11-03_19:03:33 Starting download for Ticker [MSFT] after 18 seconds 2#2
+11-03_19:03:33 File [C:\Data\Dev\Java\StockPriceDownloader\Data\MSFT.csv] downloaded successfully! Time taken =0.14 seconds.
+11-03_19:03:33 The Total Time 41.91 seconds, FileDownload only=0.80 seconds to complete download 2 files.
+11-03_19:08:44 Starting load [C:\Data\Dev\Java\StockPriceDownloader\Data\AAPL.csv],
+11-03_19:08:44 CREATE TABLE IF NOT EXISTS StockPricesRaw ("Ticker" VARCHAR(255),"Date" VARCHAR(255),"Open" VARCHAR(255),"High" VARCHAR(255),"Low" VARCHAR(255),"Close" VARCHAR(255),"Adj Close" VARCHAR(255),"Volume" VARCHAR(255))
+11-03_19:08:45 DELETE FROM StockPrices WHERE ROWID IN (select StockPrices.ROWID from StockPrices inner join StockPricesRaw on StockPrices.Ticker = StockPricesRaw.Ticker and StockPrices.PriceDate = StockPricesRaw."Date") ;
+11-03_19:08:45 INSERT INTO StockPrices (Ticker,PriceDate,Open,High,Low,Close,AdjClose,Volume) select raw.Ticker, raw."Date", raw.Open,raw.High,raw.Low,raw.Close, raw."Adj Close", raw.Volume from StockPricesRaw raw left outer join StockPrices sp on raw.Ticker = sp.Ticker and raw."Date" = sp.PriceDate where sp.PriceDate is NULL;
+11-03_19:08:45 File [C:\Data\Dev\Java\StockPriceDownloader\Data\AAPL.csv] Upload success! Time taken =1.58 seconds.
+11-03_19:08:45 Starting load [C:\Data\Dev\Java\StockPriceDownloader\Data\MSFT.csv],
+11-03_19:08:46 CREATE TABLE IF NOT EXISTS StockPricesRaw ("Ticker" VARCHAR(255),"Date" VARCHAR(255),"Open" VARCHAR(255),"High" VARCHAR(255),"Low" VARCHAR(255),"Close" VARCHAR(255),"Adj Close" VARCHAR(255),"Volume" VARCHAR(255))
+11-03_19:08:47 DELETE FROM StockPrices WHERE ROWID IN (select StockPrices.ROWID from StockPrices inner join StockPricesRaw on StockPrices.Ticker = StockPricesRaw.Ticker and StockPrices.PriceDate = StockPricesRaw."Date") ;
+11-03_19:08:47 INSERT INTO StockPrices (Ticker,PriceDate,Open,High,Low,Close,AdjClose,Volume) select raw.Ticker, raw."Date", raw.Open,raw.High,raw.Low,raw.Close, raw."Adj Close", raw.Volume from StockPricesRaw raw left outer join StockPrices sp on raw.Ticker = sp.Ticker and raw."Date" = sp.PriceDate where sp.PriceDate is NULL;
+11-03_19:08:47 File [C:\Data\Dev\Java\StockPriceDownloader\Data\MSFT.csv] Upload success! Time taken =1.36 seconds.
+11-03_19:08:47 The Total time to Upload=2.94 seconds 2 files.

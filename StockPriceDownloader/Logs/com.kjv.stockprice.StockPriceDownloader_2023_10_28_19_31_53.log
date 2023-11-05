@@ -1,0 +1,9 @@
+10-28_19:31:53 Initialization StockPriceDownloader
+10-28_19:32:12 Starting download for Ticker [AAPL] after 19 seconds 1#52
+10-28_19:32:13 File [C:\Data\Dev\Java\StockPriceDownloader\Data\AAPL.csv] downloaded successfully! Time taken =0.63 seconds.
+10-28_19:32:24 Starting download for Ticker [MSFT] after 11 seconds 2#52
+10-28_19:32:24 File [C:\Data\Dev\Java\StockPriceDownloader\Data\MSFT.csv] downloaded successfully! Time taken =0.11 seconds.
+10-28_19:32:47 Starting download for Ticker [GOOGL] after 23 seconds 3#52
+10-28_19:32:47 File [C:\Data\Dev\Java\StockPriceDownloader\Data\GOOGL.csv] downloaded successfully! Time taken =0.14 seconds.
+10-28_19:33:12 Starting download for Ticker [AMZN] after 25 seconds 4#52
+10-28_19:33:12 File [C:\Data\Dev\Java\StockPriceDownloader\Data\AMZN.csv] downloaded successfully! Time taken =0.10 seconds.
