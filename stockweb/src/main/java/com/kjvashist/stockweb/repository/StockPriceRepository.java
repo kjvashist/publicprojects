@@ -15,21 +15,18 @@ public class StockPriceRepository {
     @Autowired
     private Environment env;
 
-    private String dbPath1="";
-    private String dbPath2="";
-
+    private String dbPaths="";
     int monthsOfData=3;
 
 
     public StockPriceRepository(){
         ResourceBundle bundle = ResourceBundle.getBundle("application");
-        dbPath1 = bundle.getString("SQLITE_DATABASE_PATH1");
-        dbPath2 = bundle.getString("SQLITE_DATABASE_PATH2");
+        dbPaths = bundle.getString("SQLITE_DATABASE_PATHS");
         monthsOfData =  Integer.parseInt(bundle.getString("MONTHS_DATA")) ;
     }
     public  Iterable<StockPrice>  getPriceHistForTicker(String ticker)
     {
-        try(DbWrapper dbWrapper = new DbWrapper(new String[]{dbPath1,dbPath2} ))
+        try(DbWrapper dbWrapper = new DbWrapper(dbPaths))
         {
             //String sql = String.format("select Ticker, PriceDate , Open , High , Low , Close , AdjClose,Volume from StockPrices where Ticker='%s' and PriceDate>= date('now','-3 month')  order by PriceDate desc", ticker);
             String priceDateFilter = String.format("and PriceDate>= date('now','-%d month')",monthsOfData);
@@ -51,7 +48,7 @@ public class StockPriceRepository {
 
     public  Iterable<String>  getTickers()
     {
-        try(DbWrapper dbWrapper = new DbWrapper(new String[]{dbPath1,dbPath2} ))
+        try(DbWrapper dbWrapper = new DbWrapper(dbPaths))
         {
             String sql = "select distinct Ticker from StockPrices order by Ticker";
             ResultSet rSet = dbWrapper.select(sql);

@@ -9,10 +9,12 @@ import java.sql.SQLException;
 public class DbWrapper implements AutoCloseable {
         private Connection connection=null;
 
-    public DbWrapper(String[] arrdatabasePath) {
-        for(int trtCtr=0;trtCtr<2 && this.connection==null;trtCtr++) {
+    public DbWrapper(String dbPaths) {
+        String[] arrdatabasePath = dbPaths.split(",", 10);
+        for(int trtCtr=0;trtCtr<arrdatabasePath.length && this.connection==null;trtCtr++) {
             try {
-                this.connection = DriverManager.getConnection("jdbc:sqlite:" + arrdatabasePath[trtCtr]);
+                this.connection = DriverManager.getConnection("jdbc:sqlite:" + arrdatabasePath[trtCtr].trim());
+                break;
             } catch (SQLException sqle) {
             }
         }
