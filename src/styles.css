@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+.form_contol_table
+{
+    width:320px;
+}
+.form_contol_label_col
+{
+    width:120px;
+}
+.form_contol_input_col
+{
+    width:200px;
+}

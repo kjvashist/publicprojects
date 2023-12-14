@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/ui">StockPrices using Angular 16 UI and .Net 8.0 and Sqlite DB REST API</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['ui/stockprices']">StockPrices</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <h1>Stock Prices for Tickers</h1>
+  <label id="lblTicker">Ticker:</label>
+  <span>&nbsp;</span>
+  <select #comboBox (change)="onSelectionChange($event)" id="tickers_combo" [disabled]="getDisableCombbo()" >
+    <option *ngFor="let ticker of tickers" [value]="ticker">{{ticker}}</option>
+  </select>
+  <div>
+    <span>
+      &nbsp;
+    </span>
+  </div>
+</div>
+<router-outlet></router-outlet>
